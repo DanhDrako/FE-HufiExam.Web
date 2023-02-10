@@ -1,0 +1,10 @@
+const Actions = {
+  ALL_POST:'ALL_POST',
+  INSERR_NEW_POST: 'INSERR_NEW_POST',
+  EDIT_POST: 'EDIT_POST',
+  CATEGORIES: 'CATEGORIES',
+  TAGS: 'TAGS',
+  DASHBOARD: 'DASHBOARD',
+}
+
+export default Actions;
