@@ -16,10 +16,10 @@ Welcome to **Myhufier**
 
 
 ## How to run ?
-1. `git clone -b develop https://github.com/vietnq-dgh/FE-MyHufier.git`
-2. `cd FE-MyHufier/`
-3. `yarn`
-4. `yarn start`
+1. `git clone -b develop https://github.com/DanhDrako/FE-HufiExam.Web.git`
+2. `cd FE-KHOALUAN/`
+3. `npm i`
+4. `npm start`
 ## Requirements ?
 - npm version 6.14.11 or higher `npm -v`
 - yarn version 1.22.2 or higher `yarn -v`
