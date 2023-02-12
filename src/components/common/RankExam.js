@@ -245,14 +245,19 @@ class RankExam extends Component {
                   <CheckOutlined /> {moment(u.updateAt).fromNow()}
                 </Tag>
               </div>
+              
             );
           })}
-
+                  
           <PagingComponent
             total={v.post.count}
             onPageChange={(page, limit) => this.onPageChange(page, limit)}
             nonScroll={true}
           />
+
+          <a className="btn btn-success" href="#">
+          Xuất exel
+          </a>
         </Panel>
       );
     });
