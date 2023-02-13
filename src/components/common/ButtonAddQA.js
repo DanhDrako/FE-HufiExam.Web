@@ -176,9 +176,9 @@ class ButtonAddQA extends Component {
             </div>
 
           </div>
-          <div className='w-100 mt-3 mb-3'>
+          {/* <div className='w-100 mt-3 mb-3'>
             <Button block type='dashed'>+ Thêm đáp án</Button>
-          </div>
+          </div> */}
         </Modal>
       </>
     );

@@ -405,7 +405,7 @@ class Examquiz extends Component {
                   </button></li>
                 </ul>
               </div>
-              <div className="exem_quiz">
+              {/* <div className="exem_quiz">
                 <div className="exem_quiz-filter bg-border m-2 p-2">
                   <p className='fw-bold'>Lọc câu hỏi</p>
                   <Select
@@ -416,7 +416,7 @@ class Examquiz extends Component {
                     <Select.Option value={2}>Đã trả lời</Select.Option>
                   </Select>
                 </div>
-              </div>
+              </div> */}
               <div className="exam_question bg-border m-2 p-2">
                 <div className="overflow-auto--">
                   {this.getRadioUserCheck()}

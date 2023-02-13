@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import FACTORY from "../../common/FACTORY";
 import { Apis } from "../../common/utils/Apis";
@@ -14,19 +15,21 @@ import moment from "moment";
 import PagingComponent from "./PagingComponent";
 import { PublicModules } from "../../common/PublicModules";
 import { CoreUI } from "../../common/CoreUI";
-
+//XUAT EX
+import { CSVLink } from "react-csv";
 const { Panel } = Collapse;
+
 
 const genExtra = (userCount) => (
   <>
-    <SyncOutlined
-      spin
+    {/* <SyncOutlined
+      // spin
       onClick={(_event) => {
         message.success("Đang đồng bộ theo thời gian thực");
       }}
       className="rank-text"
-    />
-    &nbsp;{userCount} Exam
+    /> */}
+    &nbsp;{userCount} người thi
   </>
 );
 
@@ -164,8 +167,36 @@ class RankExam extends Component {
       });
     });
   }
-
+  ///
+  handleExportExcel(postID){
+    let data = [];
+    this.state.listRank.forEach(function(v){
+      if(postID === v.post.id)
+      {
+        v.users.forEach(function(a){
+        var us = {};
+        us.diem = a.point;
+        us.lanthi = a.tryNumber;
+        us.ten = a.user.displayName;
+        us.gioitinh = a.user.sex;
+        us.ngaysinh = a.birthday;
+        us.gmail = a.user.email;
+        data.push(us);
+      })
+    }
+    }
+    )
+    return data;
+  }
   reloadListRankExam() {
+    let headers = [
+      { label: "Tên", key: "ten" },
+      { label: "Giới tính", key: "gioitinh" },
+      { label: "Ngày sinh", key: "ngaysinh" },
+      { label: "Gmail", key: "gmail" },
+      { label: "Lần thi", key: "lanthi" },
+      { label: "Điểm số", key: "diem" }
+    ];
     return this.state.listRank.map((v, k) => {
       return (
         <Panel
@@ -179,12 +210,12 @@ class RankExam extends Component {
                 ""
               )}
               &nbsp; &nbsp;
-              {v.post.title}
+              {v.post.title}             
             </span>
           }
           key={k}
           extra={genExtra(v.post.count)}
-        >
+        >        
           {v.users.map((u, s) => {
             return (
               <div
@@ -192,8 +223,9 @@ class RankExam extends Component {
                 style={{ borderRadius: 3 }}
                 key={k + s}
               >
+                
                 {this.getMedal(s + 1)} &nbsp;
-                <span className="fw-bold rank-text">HUFIER: </span>
+                <span className="fw-bold rank-text">HUFIDOC: </span>
                 <MyImageView
                   width={32}
                   height={32}
@@ -237,30 +269,43 @@ class RankExam extends Component {
                     Facebook,{" "}
                   </Tooltip>
                 )}{" "}
-                <a className="_text-thr" href={"mailto:" + u.user.email}>
+                {/* <a className="_text-thr" href={"mailto:" + u.user.email}>
                   <MailFilled /> Gmail.
-                </a>
+                </a> */}
                 &nbsp;
                 <Tag color="processing">
                   <CheckOutlined /> {moment(u.updateAt).fromNow()}
                 </Tag>
               </div>
-              
             );
           })}
-                  
+
           <PagingComponent
             total={v.post.count}
             onPageChange={(page, limit) => this.onPageChange(page, limit)}
             nonScroll={true}
           />
-
-          <a className="btn btn-success" href="#">
-          Xuất exel
-          </a>
-        </Panel>
+          <CSVLink 
+          data={this.handleExportExcel(v.post.id)}
+          headers= {headers}
+          filename = {v.post.title}    
+          >
+            <button style={{
+              border: "none",
+              marginLeft: 10,
+              color: "white",
+            }}>
+            <span className="fw-bold rank-text" style={{
+              color: "green",
+            }}>
+            XUẤT ĐIỂM THI
+            </span>
+            </button>
+          </CSVLink>
+        </Panel>       
       );
     });
+    
   }
 
   onPageChange(page, limit) {

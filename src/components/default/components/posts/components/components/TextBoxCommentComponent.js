@@ -5,9 +5,7 @@ class TextBoxCommentComponent extends Component {
     if (!this.props.onChange) return;
     this.props.onChange(e);
   }
-
   render() {
-
     return (
       <input
         value={this.props.value || ''}

@@ -202,7 +202,6 @@ class MenuCategoryComponentV2 extends Component {
         <Redirect to='/black-market' />
       );
     return (
-     
       <div className='menu-categories bg-border'>
         <div className='cate-focus fw-bold'>
           <NumberSerchComponent />
@@ -232,11 +231,11 @@ class MenuCategoryComponentV2 extends Component {
                 Nhập từ tìm kiếm
               </p>
             </div>
-            <div className='col-3'>
+            {/* <div className='col-3'>
               <span className="spinner-grow spinner-grow-sm m-2 mt-0 mb-0 _text-sec" role="status">
                 <span className="visually-hidden">Loading...</span>
               </span>
-            </div>
+            </div> */}
           </div>
           <div className='mb-2'>
             <figcaption className="blockquote-footer m-2">
@@ -411,8 +410,7 @@ class MenuCategoryComponentV2 extends Component {
           />
         </div> */}
       </div >
-    //<div></div>
-      );
+    );
   }
 }
 

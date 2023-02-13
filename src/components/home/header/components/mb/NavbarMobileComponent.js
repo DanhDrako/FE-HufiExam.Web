@@ -187,8 +187,8 @@ class NavbarMobileComponent extends Component {
                   onClick={() => this.onClickNav("/donate", "DONATE")}
                 >
                   Ủng hộ admin
-                </Menu.Item>
-                <Menu.Item
+                </Menu.Item> */}
+                {/* <Menu.Item
                   key="/price-gold"
                   onClick={() => this.onClickNav("/price-gold", "PRICEGOLD")}
                 >

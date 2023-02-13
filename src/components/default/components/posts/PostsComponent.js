@@ -205,23 +205,24 @@ class PostsComponent extends Component {
           <span
             className='text-capitalize'
           >
-            <i className="far fa-heart" style={{ fontSize: '5px' }}>&nbsp;</i>
+            {/* <i className="far fa-heart" style={{ fontSize: '5px' }}>&nbsp;</i>
             <i className="far fa-heart" style={{ fontSize: '10px' }}>&nbsp;</i>
-            <i className="far fa-heart"></i>
-            &nbsp;Cám Ơn: <span className='_text-sec fw-bold'>"{own.displayName || own.username}"</span>&nbsp;
+            <i className="far fa-heart"></i> */}
+            &nbsp;Tác giả: <span className='_text-sec fw-bold'> - {own.displayName || own.username} </span>&nbsp;
             <i className="far fa-heart">&nbsp;</i>
-            <i className="far fa-heart" style={{ fontSize: '10px' }}>&nbsp;</i>
-            <i className="far fa-heart" style={{ fontSize: '5px' }}>&nbsp;</i>
+            {/* <i className="far fa-heart" style={{ fontSize: '10px' }}>&nbsp;</i>
+            <i className="far fa-heart" style={{ fontSize: '5px' }}>&nbsp;</i> */}
           </span>
         </p>
-        <p
+        {/* <p
           style={{ height: 'auto', overflowY: 'hidden' }}
           className='text-capitalize m-0 p-2'>
           Bạn thắc mắc liên hệ: {
             own.linkFacebook ? <a href={own.linkFacebook} className='_text-thr' target='blank'><FacebookFilled /> Facebook, </a> :
               <Tooltip className='_text-thr' title='Tác giả chưa cập nhật Link Facebook'>Facebook, </Tooltip>
-          } <a className='_text-thr' href={'mailto:' + own.email}><MailFilled /> Gmail.</a>
-        </p>
+          } 
+          <a className='_text-thr' href={'mailto:' + own.email}><MailFilled /> Gmail.</a>
+        </p> */}
       </div>
     );
   }

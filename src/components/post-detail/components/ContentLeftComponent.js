@@ -131,9 +131,9 @@ class ContentLeftComponent extends Component {
                   <ButtonShareOnFacebook
                     post={this.props.postDetail}
                   />
-                  <ButtonShareOnEmail
+                  {/* <ButtonShareOnEmail
                     post={this.props.postDetail}
-                  />
+                  /> */}
                 </Space>
               </div>
               <hr className="mb40" />
@@ -144,7 +144,7 @@ class ContentLeftComponent extends Component {
                 /> : ''}
 
               {/* <hr className="mb40" /> */}
-              <h3>About Author</h3>
+              <h3>Tác giả</h3>
               <div className="media mb40">
                 {own ?
                   <Comment
@@ -170,10 +170,10 @@ class ContentLeftComponent extends Component {
                       user={own}
                     />
                   </span>
-                  {own ?
+                  {/* {own ?
                     <ButtonMessage
                       user={own}
-                    /> : ''}
+                    /> : ''} */}
                 </Space>
               </div>
               <hr className="mb40" />
