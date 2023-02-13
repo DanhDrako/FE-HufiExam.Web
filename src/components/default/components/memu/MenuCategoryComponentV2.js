@@ -202,6 +202,7 @@ class MenuCategoryComponentV2 extends Component {
         <Redirect to='/black-market' />
       );
     return (
+     
       <div className='menu-categories bg-border'>
         <div className='cate-focus fw-bold'>
           <NumberSerchComponent />
@@ -410,7 +411,8 @@ class MenuCategoryComponentV2 extends Component {
           />
         </div> */}
       </div >
-    );
+    //<div></div>
+      );
   }
 }
 

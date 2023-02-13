@@ -182,7 +182,7 @@ class NavbarMobileComponent extends Component {
                 >
                   Hộp thư góp ý
                 </Menu.Item>
-                <Menu.Item
+                {/* <Menu.Item
                   key="/donate"
                   onClick={() => this.onClickNav("/donate", "DONATE")}
                 >
@@ -193,7 +193,7 @@ class NavbarMobileComponent extends Component {
                   onClick={() => this.onClickNav("/price-gold", "PRICEGOLD")}
                 >
                   Xem biểu đồ giá vàng
-                </Menu.Item>
+                </Menu.Item> */}
               </SubMenu>
             </Menu>
           </Drawer>
