@@ -22,7 +22,7 @@ class LoadingV2Component extends Component {
               <i className="far fa-heart" style={{ fontSize: '5px' }}>&nbsp;</i>
               <i className="far fa-heart" style={{ fontSize: '10px' }}>&nbsp;</i>
               <i className="far fa-heart"></i>
-            &nbsp;www.myhufier.com&nbsp;
+            &nbsp;hufidoc.online&nbsp;
             <i className="far fa-heart">&nbsp;</i>
               <i className="far fa-heart" style={{ fontSize: '10px' }}>&nbsp;</i>
               <i className="far fa-heart" style={{ fontSize: '5px' }}>&nbsp;</i>

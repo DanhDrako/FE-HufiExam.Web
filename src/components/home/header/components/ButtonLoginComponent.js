@@ -196,7 +196,7 @@ const ButtonLoginComponent = (_props) => {
       CoreUI.fun_showNotification({
         type: NotificationKeys.INFO,
         title: "Không khả dụng!",
-        message: "Hãy đi đến trang web: www.myhufier.com",
+        message: "Hãy đi đến trang web: hufidoc.online",
       });
       e.preventDefault();
       return;
