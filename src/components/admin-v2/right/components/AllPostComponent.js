@@ -103,16 +103,16 @@ class AllPostComponent extends Component {
 
   columns = [
     {
-      title: "Title",
+      title: "Tiêu đề",
       key: "1",
-      width: 150,
+      width: 130,
       render: (obj) => {
         return <div className="text-capitalize">{obj.title}</div>;
       },
     },
     {
-      title: "Status",
-      width: 100,
+      title: "Trạng thái",
+      width: 90,
       key: "id",
       render: (_obj) => {
         if (_obj.commited)
@@ -138,7 +138,7 @@ class AllPostComponent extends Component {
       },
     },
     {
-      title: "Image Banner",
+      title: "Ảnh",
       key: "2",
       width: 110,
       render: (obj) => {
@@ -155,35 +155,35 @@ class AllPostComponent extends Component {
         );
       },
     },
+    // {
+    //   title: "Upload Type",
+    //   key: "3",
+    //   width: 100,
+    //   render: (obj) => {
+    //     switch (obj.imageUploadType) {
+    //       case ImageUploadKeys.SERVER:
+    //         return (
+    //           <div className="text-center">
+    //             <Tag className="tag-sec">{obj.imageUploadType}</Tag>
+    //           </div>
+    //         );
+    //       case ImageUploadKeys.IMGUR_COM:
+    //         return (
+    //           <div className="text-center">
+    //             <Tag className="tag-sec">{obj.imageUploadType}</Tag>
+    //           </div>
+    //         );
+    //       default:
+    //         return (
+    //           <div className="text-center">
+    //             <Tag className="tag-sec">{obj.imageUploadType}</Tag>
+    //           </div>
+    //         );
+    //     }
+    //   },
+    // }
     {
-      title: "Upload Type",
-      key: "3",
-      width: 100,
-      render: (obj) => {
-        switch (obj.imageUploadType) {
-          case ImageUploadKeys.SERVER:
-            return (
-              <div className="text-center">
-                <Tag className="tag-sec">{obj.imageUploadType}</Tag>
-              </div>
-            );
-          case ImageUploadKeys.IMGUR_COM:
-            return (
-              <div className="text-center">
-                <Tag className="tag-sec">{obj.imageUploadType}</Tag>
-              </div>
-            );
-          default:
-            return (
-              <div className="text-center">
-                <Tag className="tag-sec">{obj.imageUploadType}</Tag>
-              </div>
-            );
-        }
-      },
-    },
-    {
-      title: "Create At",
+      title: "Ngày đăng",
       key: "4",
       width: 100,
       render: (obj) => {
@@ -191,9 +191,9 @@ class AllPostComponent extends Component {
         return <div className="text-center">{date.toUTCString()}</div>;
       },
     },
-    { title: "Category", dataIndex: "cate", key: "5", width: 150 },
+    { title: "Thể loại", dataIndex: "cate", key: "5", width: 130 },
     {
-      title: "AC",
+      title: "Chỉnh sửa",
       key: "operation",
       fixed: "right",
       width: 30,
@@ -220,7 +220,7 @@ class AllPostComponent extends Component {
       },
     },
     {
-      title: "SHOW RANK",
+      title: "Xếp hạng",
       key: "6",
       width: 50,
       fixed: "right",

@@ -41,7 +41,20 @@ class NavbarPcComponent extends Component {
                     Trang chủ
               </NavLink>
               </li>
-              
+              <li><NavLink
+                onClick={() => this.navLinkClicked('BLACK_MARKET')}
+                to="/black-market"
+                activeStyle={{
+                  fontWeight: "bold",
+                  borderBottom: "1px solid"
+                }}
+                className="nav-link px-2">
+                <div className='bi d-block mx-auto mb-1 text-center'>
+                  <i className="fas fa-torah icon-header"></i>
+                </div>
+                  Nhà sách
+            </NavLink>
+              </li>
               <li><NavLink
                 onClick={() => this.navLinkClicked('USER_POST')}
                 to="/user-post"
@@ -56,6 +69,7 @@ class NavbarPcComponent extends Component {
                   Bài Viết
             </NavLink>
               </li>
+
               <li>
                 <NavLink
                   onClick={() => this.navLinkClicked('RANK_EXAMP')}
@@ -88,21 +102,6 @@ class NavbarPcComponent extends Component {
                 </NavLink>
               </li>
 
-              <li><NavLink
-                onClick={() => this.navLinkClicked('BLACK_MARKET')}
-                to="/black-market"
-                activeStyle={{
-                  fontWeight: "bold",
-                  borderBottom: "1px solid"
-                }}
-                className="nav-link px-2">
-                <div className='bi d-block mx-auto mb-1 text-center'>
-                  <i className="fas fa-torah icon-header"></i>
-                </div>
-                  Báo cáo
-            </NavLink>
-              </li>
-              
               <li className="nav-item dropdown">
                 <span role='link' className="nav-link dropdown-toggle" id="navbarDarkDropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                   <div className='bi d-block mx-auto mb-1 text-center'>
@@ -132,8 +131,8 @@ class NavbarPcComponent extends Component {
                       }}
                       className="dropdown-item">Ủng hộ Amin
                     </NavLink>
-                  </li>
-                  <li>
+                  </li> */}
+                  {/* <li>
                     <NavLink
                       onClick={() => this.navLinkClicked('DONATE')}
                       to="/price-gold"

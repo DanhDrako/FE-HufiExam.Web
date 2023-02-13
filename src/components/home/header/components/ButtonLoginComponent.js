@@ -196,7 +196,7 @@ const ButtonLoginComponent = (_props) => {
       CoreUI.fun_showNotification({
         type: NotificationKeys.INFO,
         title: "Không khả dụng!",
-        message: "Hãy đi đến trang web: hufidoc.online",
+        message: "Hãy đi đến trang web: www.myhufier.com",
       });
       e.preventDefault();
       return;
@@ -264,11 +264,11 @@ const ButtonLoginComponent = (_props) => {
             <ButtonForgotPassComponent />
           </div>
 
-          <Form.Item {...tailLayout} name="remember" valuePropName="checked">
+          {/* <Form.Item {...tailLayout} name="remember" valuePropName="checked">
             <Checkbox>Remember me</Checkbox>
-          </Form.Item>
+          </Form.Item> */}
         </Form>
-        <div className="row mb-4">
+        {/* <div className="row mb-4">
           <div className="col-6" style={{ textAlign: "right" }}>
             <a
               onClick={(e) => btnLoginWithClicked(e)}
@@ -305,7 +305,7 @@ const ButtonLoginComponent = (_props) => {
               </Tooltip>
             </a>
           </div>
-        </div>
+        </div> */}
         <div className="m-2 p-2 mt-0 pt-0 mb-0">
           <Switch
             name="isAccessRule"

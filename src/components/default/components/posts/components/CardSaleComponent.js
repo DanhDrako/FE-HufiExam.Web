@@ -73,10 +73,10 @@ class CardSaleComponent extends Component {
         </div>
         {/* Card Body */}
         <div className="card-body">
-          <div className="list-product-item__favourite">
+          {/* <div className="list-product-item__favourite">
             <i className="fas fa-check"></i>
             <span>Yêu thích</span>
-          </div>
+          </div> */}
           <div className="list-product-item__sale-off">
             <p className="list-product-item_sale-off-percent">
               {this.getPercent(post)} %
@@ -88,9 +88,9 @@ class CardSaleComponent extends Component {
           </h6>
           {/* List */}
           <div className="float-start">{moment(post.createAt).calendar()}</div>
-          <div className="float-end">
+          {/* <div className="float-end">
             <ButtonMessage user={post.own} />
-          </div>
+          </div> */}
           <br />
           <hr />
           <div className="text-center">
@@ -114,9 +114,9 @@ class CardSaleComponent extends Component {
             <div className="col ms-2">
               <span>{post.own.username}</span>
             </div>
-            <div className="col-auto">
+            {/* <div className="col-auto">
               <ButtonGoToFacebook user={post.own} />
-            </div>
+            </div> */}
           </div>
           <div className="mt-2">
             <div className="float-start">

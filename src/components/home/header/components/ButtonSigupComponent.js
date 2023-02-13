@@ -297,7 +297,7 @@ const ButtonSigupComponent = (_props) => {
           </Form.Item>
 
         </Form>
-        <div className='row mb-3'>
+        {/* <div className='row mb-3'>
           <div className='col-6' style={{ textAlign: 'right' }}>
             <a href={Apis.API_HOST + Apis.API_TAILER.AUTH_FACEBOOK}>
               <button className='btn-ds outline-pr'>
@@ -312,7 +312,7 @@ const ButtonSigupComponent = (_props) => {
               </button>
             </a>
           </div>
-        </div>
+        </div> */}
         <div className='m-2 p-2 mt-0 pt-0'>
           <Switch name='isAccessRule' onChange={(e) => accessRuleChange(e)} checkedChildren="Cám ơn" unCheckedChildren="Tôi!... Đồng ý với điều khoản" />
         </div>

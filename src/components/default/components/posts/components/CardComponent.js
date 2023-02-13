@@ -55,7 +55,7 @@ class CardComponent extends Component {
         <div
           style={{ border: '1px solid var(--cl-border-light)' }}
           className='w-100 mt-2'>
-          <div
+          {/* <div
             className='text-center p-2'
             style={{ backgroundColor: 'var(--cl-opa)', borderBottom: '1px solid var(--cl-border-light)' }}
           >
@@ -63,7 +63,7 @@ class CardComponent extends Component {
             <Tooltip title='Lưu ý: Nội dung thư phải trên 100 ký tự' color={FACTORY.TOOLTIP_COLOR}>
               <a href={'mailto:myhufier@gmail.com'}>Yêu cầu gỡ</a>
             </Tooltip>
-          </div>
+          </div> */}
 
           <div className='text-center p-2'>
             <ButtonsReactComponent post={post} />
@@ -104,9 +104,9 @@ class CardComponent extends Component {
             <ButtonShareOnFacebook
               post={post}
             />
-            <ButtonShareOnEmail
+            {/* <ButtonShareOnEmail
               post={post}
-            />
+            /> */}
           </Space>
         </div>
       </div>
